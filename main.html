@@ -1,16 +1,58 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <title>Tic Tac Toe</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <div class="container" id="container">
+    <!-- Start / setup screen -->
+    <div class="card" id="setup-screen">
+      <h1 class="logo">Tic Tac Toe</h1>
 
+      <form id="player-form" class="form-group" autocomplete="off">
+        <label>
+          Player 1
+          <input id="player-1" type="text" placeholder="enter name" />
+        </label>
+
+        <label>
+          Player 2
+          <input id="player-2" type="text" placeholder="enter name" />
+        </label>
+
+        <button id="submit" type="submit">Start Game</button>
+      </form>
+    </div>
+
+    <!-- Game screen (hidden initially) -->
+    <div class="card" id="game-screen" style="display:none;">
+      <h1 class="logo">Tic Tac Toe</h1>
+      <div class="message" id="message">Player, you're up</div>
+
+      <div class="board" id="board">
+        <!-- 9 cells with ids 1..9 -->
+        <div class="cell" id="1" data-index="1"></div>
+        <div class="cell" id="2" data-index="2"></div>
+        <div class="cell" id="3" data-index="3"></div>
+
+        <div class="cell" id="4" data-index="4"></div>
+        <div class="cell" id="5" data-index="5"></div>
+        <div class="cell" id="6" data-index="6"></div>
+
+        <div class="cell" id="7" data-index="7"></div>
+        <div class="cell" id="8" data-index="8"></div>
+        <div class="cell" id="9" data-index="9"></div>
+      </div>
+
+      <div class="controls">
+        <button id="restart">Restart</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
