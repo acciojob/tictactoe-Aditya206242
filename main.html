@@ -8,22 +8,25 @@
 </head>
 <body>
   <div class="container" id="container">
-    <!-- Start / setup screen -->
+    <!-- Setup screen -->
     <div class="card" id="setup-screen">
       <h1 class="logo">Tic Tac Toe</h1>
 
-      <form id="player-form" class="form-group" autocomplete="off">
-        <label>
-          Player 1
-          <input id="player-1" type="text" placeholder="enter name" />
-        </label>
+      <!-- note: explicit div.form-group (tests expect a form-group) -->
+      <form id="player-form" autocomplete="off">
+        <div class="form-group">
+          <label for="player1">
+            Player 1
+            <input id="player1" type="text" placeholder="enter name" />
+          </label>
 
-        <label>
-          Player 2
-          <input id="player-2" type="text" placeholder="enter name" />
-        </label>
+          <label for="player2">
+            Player 2
+            <input id="player2" type="text" placeholder="enter name" />
+          </label>
 
-        <button id="submit" type="submit">Start Game</button>
+          <button id="submit" type="submit">Start Game</button>
+        </div>
       </form>
     </div>
 
@@ -33,7 +36,6 @@
       <div class="message" id="message">Player, you're up</div>
 
       <div class="board" id="board">
-        <!-- 9 cells with ids 1..9 -->
         <div class="cell" id="1" data-index="1"></div>
         <div class="cell" id="2" data-index="2"></div>
         <div class="cell" id="3" data-index="3"></div>
@@ -48,7 +50,7 @@
       </div>
 
       <div class="controls">
-        <button id="restart">Restart</button>
+        <button id="restart" type="button">Restart</button>
       </div>
     </div>
   </div>
